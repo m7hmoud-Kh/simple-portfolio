@@ -1,0 +1,732 @@
+/*
+** Template    : simple template
+** created In  : 25/6/2020
+** created By  : mahmoud khairy
+*/
+:root {
+    --main-color: #ff9100;
+    --sec-color: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* lodaing name*/
+.loadingname {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingname h1 {
+    position: relative;
+    font-size: 10em !important;
+    color: #222;
+    text-transform: capitalize;
+    border-bottom: 10px solid #222;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+}
+
+.loadingname h1::before {
+    content: attr(data-load);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--main-color);
+    overflow: hidden;
+    border-bottom: 10px solid var(--main-color);
+    animation: ani 5s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* lodaing name*/
+/*start the header*/
+header .man {
+    background-image: url(../image/man.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+header .content {
+    position: relative;
+    z-index: 3;
+    padding-top: 10px;
+}
+
+header .logo {
+    padding-top: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+header .logo img {
+    width: 20%;
+    background-color: transparent;
+}
+
+header ul li {
+    display: inline-block;
+    color: #fff;
+    margin-left: 4%;
+    padding-top: 5px;
+    text-transform: capitalize;
+    transition: all 0.54s ease-in-out;
+    font-family: 'Creepster', cursive;
+
+}
+
+header ul li:last-of-type {
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 5px;
+    margin-top: 5px;
+    text-transform: capitalize;
+    border: 1px solid var(--main-color);
+
+}
+
+header ul li:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+header ul li:last-of-type:hover {
+    background-color: transparent;
+}
+
+header .bar {
+    position: relative;
+    top: -87px;
+    left: 91%;
+    display: none;
+}
+
+header .bar i {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+header .bar ul {
+    background-color: #000;
+    width: 44%;
+    height: 200px;
+    position: absolute;
+    left: -36%;
+    top: 129%;
+    margin-left: 10px;
+
+}
+
+header .bar ul::before {
+    content: "";
+    border-style: solid;
+    border-width: 12px;
+    border-color: transparent transparent var(--main-color) transparent;
+    position: absolute;
+    top: -12%;
+    left: 80%;
+
+}
+
+header .bar ul li {
+    display: block;
+    margin-bottom: 5px;
+    transition: all 0.54s ease-in-out;
+}
+
+header .bar ul li:hover {
+    transform: translateX(5px);
+
+}
+
+.none {
+    display: none
+}
+
+@media (max-width:767px) {
+    header .list-unstyled {
+        display: none;
+    }
+
+    header .bar {
+        display: block;
+    }
+
+    header .bar ul {
+        display: none;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    header .list-unstyled {
+        display: none;
+    }
+
+    header .bar {
+        display: block;
+    }
+
+    header .bar ul {
+        display: none;
+    }
+
+
+}
+
+header .info {
+    padding-top: 10%;
+    color: var(--sec-color);
+    text-transform: capitalize;
+}
+
+header .info div {
+    font-size: 30px;
+}
+
+header .info .name {
+    padding: 0.5% 0;
+    font-size: 60px !important;
+    text-transform: capitalize !important;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+.info p {
+    font-size: 30px;
+}
+
+.typed-cursor {
+    opacity: 0 !important;
+}
+
+header .info button {
+    padding: 0.75% 1.75%;
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    margin-top: 0.5%;
+}
+
+header .info button:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+/*end the header*/
+/*start the about me*/
+.sec1 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.sec1 h1 {
+    color: var(--sec-color);
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.sec1 .intro {
+    color: var(--sec-color);
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.sec1 p {
+    width: 85%;
+}
+
+.sec1 p span {
+    color: var(--main-color);
+}
+
+.sec1 button {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    transition: all 0.54s ease-in-out;
+
+}
+
+.sec1 button:hover {
+    color: var(--main-color);
+    background-color: transparent;
+
+}
+
+.sec1 .pic {
+    position: relative;
+}
+
+.sec1 .pic .bro {
+    border: 5px solid var(--main-color);
+    background-color: #fff;
+    min-height: 400px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.sec1 .pic .girle {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.sec1 .pic .girle:hover {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    transform: rotate(5deg);
+}
+
+.sec1 .pic .girle img {
+    padding: 4px;
+    background-color: #ccc;
+
+}
+
+@media (max-width:767px) {
+    .sec1 .pic {
+        margin-top: 8%;
+    }
+
+    .sec1 .pic .girle {
+        top: 36px;
+        left: 37px;
+        width: 70%;
+        height: 100%;
+    }
+
+    .sec1 .pic .girle img {
+        width: 125%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .sec1 .pic {
+        margin-top: 5%;
+    }
+
+    .sec1 .pic .girle {
+        top: -12px;
+        left: 37px;
+        width: 70%;
+        height: 100%;
+    }
+
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .sec1 .pic .girle {
+        top: 14px;
+        left: -33px;
+        width: 70%;
+        height: 100%;
+    }
+
+    .sec1 .pic .girle:hover {
+        top: 0;
+        left: -108px;
+        transform: scale(0.9);
+    }
+
+    .sec1 .pic .girle img {
+        width: 153%;
+    }
+
+
+}
+
+/*end the about me*/
+/*start our skills*/
+.sec2 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ebecec;
+}
+
+.sec2 h1 {
+    text-align: center;
+    color: var(--sec-color);
+    font-size: 50px;
+    padding-bottom: 40px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+.sec2 .main {
+    text-align: center;
+    color: var(--sec-color);
+    padding-bottom: 15px;
+
+}
+
+.sec2 p {
+    padding-top: 5px;
+    text-align: center;
+    color: var(--sec-color);
+}
+
+.skills .html,
+.skills .js,
+.skills .Bootstrap,
+.skills .php {
+    width: 80%;
+    height: 2%;
+    border-radius: 8px;
+    position: relative;
+    background-color: var(--sec-color);
+    margin-bottom: 1.5%;
+    margin-top: 5%;
+    text-indent: 10px;
+    color: #fff;
+    transition: all 0.45s ease-in-out;
+}
+
+@media (max-width:767px) {
+
+    .skills .html,
+    .skills .js,
+    .skills .Bootstrap,
+    .skills .php {
+        margin-top: 10%;
+    }
+}
+
+.skills .html span:last-of-type,
+.skills .js span:last-of-type,
+.skills .Bootstrap span:last-of-type,
+.skills .php span:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.skills .html span:first-of-type,
+.skills .js span:first-of-type,
+.skills .Bootstrap span:first-of-type,
+.skills .php span:first-of-type {
+    position: relative;
+    z-index: 8;
+}
+
+.skills .html::after {
+    content: "85%";
+}
+
+.skills .js::after {
+    content: "70%";
+}
+
+.skills .Bootstrap::after {
+    content: "90%";
+}
+
+.skills .php::after {
+    content: '60%';
+}
+
+.skills .html::after,
+.skills .js::after,
+.skills .Bootstrap::after,
+.skills .php::after {
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    background-color: var(--sec-color);
+    position: absolute;
+    top: -39px;
+    left: 1px;
+    border-radius: 5px;
+}
+
+.skills .html::before,
+.skills .js::before,
+.skills .Bootstrap::before,
+.skills .php::before {
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    border-color: var(--sec-color) transparent transparent;
+    position: absolute;
+    top: -10px;
+    left: 12px;
+}
+
+/*end our skills*/
+/*start our works*/
+.sec3 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.sec3 h1 {
+    text-align: center;
+    color: var(--sec-color);
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+.sec3 .but button {
+    padding: 1%;
+    margin-left: 5px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    transition: all 0.45s ease-in-out;
+}
+
+.sec3 .but button:hover,
+.sec3 .but .active {
+    color: #fff;
+    background-color: var(--main-color);
+    border: 2px solid #bfdeff;
+}
+
+.row .port {
+    padding-top: 30px;
+    position: relative;
+
+
+}
+
+.row .port img {
+    width: 90%;
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.45s ease-in-out;
+
+}
+
+.row .port img:hover {
+    background-color: var(--main-color);
+    transform: scale(0.9);
+
+}
+
+/*end our works*/
+/*start our concat*/
+.sec4 {
+    background-color: #151f20;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    clip-path: polygon(48.21% 15.48%, 100% 1%, 100% 100%, 0px 100%, 0px 1%);
+}
+
+.sec4 h1 {
+    text-align: center;
+    color: var(--sec-color);
+    font-size: 50px;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: -2px;
+    word-spacing: 2px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+form {
+    margin-left: 11%;
+}
+
+form input:not(:last-of-type),
+form textarea {
+    padding: 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2%;
+    background-color: transparent;
+    color: var(--sec-color);
+    transition: all 0.54s ease-in-out;
+}
+
+form input:not(:last-of-type) {
+    text-indent: 11px;
+    padding: 2px;
+}
+
+form input:not(:last-of-type):focus,
+form textarea:focus {
+    border-bottom: 1px solid var(--main-color);
+}
+
+form input:last-of-type {
+    background-color: var(--main-color);
+    color: #fff;
+    border: 1px solid var(--main-color);
+    display: block;
+    margin-left: 17%;
+}
+
+@media (max-width:767px) {
+    form input:last-of-type {
+        margin-left: 0;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    form input:last-of-type {
+        margin-left: 0;
+    }
+}
+
+.sec4 .icon {
+    padding-top: 20px;
+}
+
+.sec4 .icon i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: all 0.54s ease-in-out;
+}
+
+.sec4 .icon i:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+/*end our concat*/
+/*start scroll to top*/
+.scroll {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--main-color);
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* end scroll to top*/
+/*start color option*/
+div .option {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+div .option li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all 0.54s ease-in-out;
+}
+
+div .option li:first-of-type {
+    border-color: #ff9100;
+
+}
+
+div .option li:nth-of-type(2) {
+    border-color: #ff165d;
+}
+
+div .option li:nth-of-type(3) {
+    border-color: #b6eb7a;
+}
+
+div .option li:nth-of-type(4) {
+    border-color: #3ec1d3;
+}
+
+div .option li:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 3px 19px 6px;
+}
+
+/*end color option*/
+/*start footer*/
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000;
+}
+
+footer div {
+    color: #fff;
+}
+
+/*end footer*/
